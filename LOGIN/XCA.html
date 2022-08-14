@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="XCA.css">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div class="bg-img">
+
+<div class="container2">
+<h1>CANADIAN STUDENT TOKEN</h1>
+</div>
+
+  <form name="login" class="container"">
+    <h1>Login</h1>
+
+    <label for="uname"><b>Email</b></label>
+    <input type="text" id="uname" name="uname">
+
+    <label for="pwd"><b>Password</b></label>
+    <input type="password" id="pwd" name="pwd">
+
+    <div class="btn">
+    <button type="button"onclick="validateForm()"> Login </button>
+    </div>
+
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+</div>
+  </form>
+</div>
+
+
+</body>
+</html>
+
+<script>
+
+var count=3;
+
+function validateForm()  {
+
+    var username;
+    var password;
+
+    var storedUname = "snoopdogg@gmail.com";
+    var storedPassword = "420";
+
+    username = document.forms["login"]["uname"].value;
+    password = document.forms["login"]["pwd"].value;
+
+for (var i = 0; i <3; i++)  {
+        if (username == storedUname && password == storedPassword && count >= 1) {
+        alert ("Welcome " + username);
+        window.location.assign("website.html")
+	break;
+    } 
+        else if (count >= 1)  {
+		count = count - 1;
+	        alert("you only have " + count + " tries left");
+		document.login.uname.select();
+	   	document.login.uname.focus();
+	   	document.login.pwd.select();
+	  	document.login.pwd.focus();  	
+		break;
+    }
+        else if (count >= 0) {
+	alert("you no longer have access");	
+	break;
+    }
+  } 
+}
+</script>
+</body>
+</html>
