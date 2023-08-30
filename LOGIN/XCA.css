@@ -22,7 +22,7 @@ body {
 
 .bg-img {
   /* The image used */
-  background-image: url("xlog4.jpg");
+  background-image: url("../Website/assets/xlog4.jpg");
   margin-right: -10px;
   margin-left: -10px;
   margin-bottom: -30px;
