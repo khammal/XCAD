@@ -11,9 +11,9 @@ window.onclick = function(event) {
 
 var z = 0;
 
+// Adding, subtracting, and displaying number of XCAN for the Converter page
 document.getElementById("demo").innerHTML =
 z + " XCAN ";  
-
 
 function add()  {
   z = z + 1;  
@@ -37,6 +37,7 @@ function sub() {
   }
  }
 
+//  Change the look of a tab in the navigation bar depending on if it's opened
 function openTab(tabName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -51,13 +52,13 @@ function openTab(tabName,elmnt,color) {
   elmnt.style.backgroundColor = color;
 }
 
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
 var myIndex = 0;
 carousel();
 
+// Create the carousel in the Home page
 function carousel() {
   var i;
   var x = document.getElementsByClassName("myImages");
@@ -70,7 +71,7 @@ function carousel() {
   setTimeout(carousel, 4000); // Change image every 2 seconds
 }
 
-//Get the button
+// Get the button
 var mybutton = document.getElementById("btt");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -90,6 +91,8 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+
+// Create an accordion for the Home page
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -115,6 +118,7 @@ var toShowBase = document.querySelector('.base-currency');
 var toShowSecond = document.querySelector('.second-currency');
 var toShowResult = document.querySelector('.final-result');
 
+// Converting between two currencies
 function convertCurrency(event) {
   event.preventDefault();
   var amount = amountInput.value;
@@ -141,6 +145,7 @@ function convertCurrency(event) {
 
 btn.addEventListener('click', convertCurrency);
 
+// Generate a random string for the wallet
 function makeid() {
   var text = "0x";
   var possible = "ABCDEFabcdef0123456789";
@@ -151,11 +156,12 @@ function makeid() {
 return text;
 }
 
-
+// Display the wallet
 function make() { 
 document.getElementById("generates").innerHTML = makeid();
 }
 
+// Load login page
 function login(){
   window.location.assign("XCA.html");
 }
